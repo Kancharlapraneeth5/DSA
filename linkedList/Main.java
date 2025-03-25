@@ -4,9 +4,11 @@ public class Main {
     public static void main(String[] args) {
         Linkedlist list = new Linkedlist();
         list.append(1);
-        list.append(2);
+        list.append(7);
         list.append(3);
-        list.append(4);
+        list.append(8);
+        list.append(5);
+        list.append(2);
         // list.append(50);
         // list.append(60);
         // System.out.println();
@@ -34,14 +36,15 @@ public class Main {
         // System.out.println("the element removed at the respective index.."+list.remove(3));
         // System.out.println("printing the final list...");
         // list.print();
-        list.reverse();
+        // list.reverse();
         //list.insert(list.getLength(), 500);
-        System.out.println("printing the final reverse list...");
-        list.print();
+        // System.out.println("printing the final reverse list...");
+        // list.print();
         //list.findMiddle();
-        System.out.println("the middle element is..."+list.findMiddle().data);
+        // System.out.println("the middle element is..."+list.findMiddle().data);
         //list.createLoop();
-        System.out.println("the loop is present in the linked list..."+list.hasLoop());
-        System.out.println("the kthNode from the end is..."+list.kthNodeFromEnd(5).data);
+        // System.out.println("the loop is present in the linked list..."+list.hasLoop());
+        // System.out.println("the kthNode from the end is..."+list.kthNodeFromEnd(2).data);
+        list.partitionList(6);
     }
 }

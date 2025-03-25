@@ -274,6 +274,45 @@ public class Linkedlist{
             return kthNode;
         }
     }
+
+    // partition the linked list based on the value x
+    public void partitionList(int x){
+        Node least = null;
+        Node least_next = null;
+        Node temp = head;
+        while(temp != null){
+            if(least == null && temp == head && temp.data < x){
+                least = temp;
+                least_next = temp;
+            }
+            if(temp.next != null && temp.next.data >= x){
+                temp = temp.next;
+                if(temp.data >= x && temp.next == null){
+                    least_next.next = null;
+                }
+            }
+            if(least != null && temp.next != null && temp.next.data < x){
+                least_next.next = temp.next;
+                least_next = temp.next;
+                if(temp.data >= x){
+                    temp.next = null;
+                }
+                temp = least_next;
+            }
+            if(temp.next == null){
+                break;
+            }
+        }
+        printListFromSpecificNode(least);
+    }
+    // print the linked list from a specific node
+    public void printListFromSpecificNode(Node node){
+        Node temp = node;
+        while(temp != null){
+            System.out.println(temp.data);
+            temp = temp.next;
+        }
+    }
     // print the linked list
     public void print(){
         if(head == null){
