@@ -1,5 +1,5 @@
 package linkedList;
-public class Linkedlist{
+public class Linkedlist {
     Node head;
     Node tail;
     int length = 0;
@@ -194,117 +194,7 @@ public class Linkedlist{
         }
         length++;
     }
-    // reverse the linked list
-    public void reverse() {
-        if (head == null || head.next == null) return;  // Edge case: empty or single node list
-        Node prev = null;
-        Node current = head;
-        Node after = null;
-    
-        while (current != null) {
-            after = current.next;  // Store the next node
-            current.next = prev;      // Reverse the link
-            prev = current;           // Move prev and current one step forward
-            current = after;
-        }
-        // After the loop, prev will be pointing to the new head
-        Node temp = head;
-        head = tail;
-        tail = temp;
-    }
-    // find the middle element of the linked list, here I used  Floyd's Tortoise and Hare algorithm (please refer once again)
-    public Node findMiddle(){
-        Node slowNode = head;
-        Node fastNode = head;
 
-        if(length == 0 || length == 1){
-            return null;
-        }
-        else{
-            while(fastNode != null && fastNode.next != null){
-                slowNode = slowNode.next;
-                fastNode = fastNode.next.next;
-            }
-            return slowNode;
-        }
-    }
-
-    // create a loop in the linked list just for testing purpose
-    public void createLoop(){
-        Node temp = head;
-        while(temp.next != null){
-            temp = temp.next;
-        }
-        temp.next = head;
-    }
-
-    // check if the linked list has a loop, here I used  Floyd's Tortoise and Hare algorithm (please refer once again)
-    public boolean hasLoop(){
-        Node slow = head;
-	    Node fast = head;
-	    
-	    if(length == 0 || length == 1){
-	        return false;
-	    }
-	    
-	    else{
-	        while(true){
-	            slow = slow.next;
-	            fast = fast.next.next;
-	            
-	            if(fast == null || fast.next == null){
-	                return false;
-	            }
-	            if(fast == slow){
-	                return true;
-	            }
-	        }
-	    }
-    }
-    // find the kth node from the end of the linked list
-    public Node kthNodeFromEnd(int k){
-        Node kthNode;
-
-        int indexFromStart = getLength() - (k - 1) -1;
-        if(indexFromStart < 0){
-            throw new Error("Invalid index");
-        }
-        else{
-            kthNode = getNode(indexFromStart);
-            return kthNode;
-        }
-    }
-
-    // partition the linked list based on the value x
-    public void partitionList(int x){
-        Node least = null;
-        Node least_next = null;
-        Node temp = head;
-        while(temp != null){
-            if(least == null && temp == head && temp.data < x){
-                least = temp;
-                least_next = temp;
-            }
-            if(temp.next != null && temp.next.data >= x){
-                temp = temp.next;
-                if(temp.data >= x && temp.next == null){
-                    least_next.next = null;
-                }
-            }
-            if(least != null && temp.next != null && temp.next.data < x){
-                least_next.next = temp.next;
-                least_next = temp.next;
-                if(temp.data >= x){
-                    temp.next = null;
-                }
-                temp = least_next;
-            }
-            if(temp.next == null){
-                break;
-            }
-        }
-        printListFromSpecificNode(least);
-    }
     // print the linked list from a specific node
     public void printListFromSpecificNode(Node node){
         Node temp = node;
