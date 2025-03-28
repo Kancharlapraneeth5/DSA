@@ -2,21 +2,21 @@ package linkedList;
 
 public class LoopLinkedlist extends Linkedlist{
     // create a loop in the linked list just for testing purpose
-    public void createLoop(){
-        Node temp = head;
+    public void createLoop(Linkedlist linkedlist){
+        Node temp = linkedlist.head;
         while(temp.next != null){
             temp = temp.next;
         }
-        temp.next = head;
+        temp.next = linkedlist.head;
     }
 
     // check if the linked list has a loop, here I used  Floyd's Tortoise and Hare algorithm (please refer once again)
-    public boolean hasLoop(){
+    public boolean hasLoop(Linkedlist linkedlist){
 
-        Node slow = head;
-	    Node fast = head;
+        Node slow = linkedlist.head;
+	    Node fast = linkedlist.head;
 	    
-	    if(length == 0 || length == 1){
+	    if(linkedlist.length == 0 || linkedlist.length == 1){
 	        return false;
 	    }
 	    

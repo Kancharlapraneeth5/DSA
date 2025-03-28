@@ -2,7 +2,7 @@ package linkedList;
 
 public class PartitionLinkedlist extends Linkedlist{
     // partition the linked list based on the value x
-    public void partitionList(int x){
+    public void partitionList(Linkedlist linkedlist, int x){
 
         Node finalListStartingNode;
 
@@ -10,16 +10,16 @@ public class PartitionLinkedlist extends Linkedlist{
         Node highest = null;
         Node least_next = null;
         Node highest_next = null;
-        Node temp = head;
+        Node temp = linkedlist.head;
 
         while(temp != null){
             // for lowest partition
-            if(least == null && temp == head && temp.data < x){
+            if(least == null && temp == linkedlist.head && temp.data < x){
                 least = temp;
                 least_next = temp;
             }
             // for highest partition
-            if(highest == null && temp == head && temp.data >= x){
+            if(highest == null && temp == linkedlist.head && temp.data >= x){
                 highest = temp;
                 highest_next = temp;
             }

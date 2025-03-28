@@ -2,10 +2,10 @@ package linkedList;
 
 public class ReverseLinkedlist extends Linkedlist{
     // reverse the linked list
-    public void reverse() {
-        if (head == null || head.next == null) return;  // Edge case: empty or single node list
+    public void reverse(Linkedlist linkedlist){ {
+        if (linkedlist.head == null || linkedlist.head.next == null) return;  // Edge case: empty or single node list
         Node prev = null;
-        Node current = head;
+        Node current = linkedlist.head;
         Node after = null;
     
         while (current != null) {
@@ -15,10 +15,12 @@ public class ReverseLinkedlist extends Linkedlist{
             current = after;
         }
         // After the loop, prev will be pointing to the new head
-        Node temp = head;
-        head = tail;
-        tail = temp;
-        print();
-    }
+        Node temp = linkedlist.head;
+        linkedlist.head = linkedlist.tail;
+        linkedlist.tail = temp;
 
+        super.head = linkedlist.head;
+        print();
+     }
+   }
 }
