@@ -5,7 +5,6 @@ import java.util.Set;
 
 public class RemoveDuplicates extends Linkedlist{
         public void removeDuplicates(Linkedlist linkedlist){
-        // Adding the existing elements in the linkedlist to the set (which removes duplicates)
         Set<Integer> numbers = new HashSet<>();
         Node temp = linkedlist.head;
         while(temp != null){
