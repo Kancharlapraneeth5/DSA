@@ -6,11 +6,10 @@ public class Main {
 
         // Test case - 1
         list.append(1);
-        list.append(1);
-        list.append(0);
-        list.append(1);
-        list.append(0);
-        list.append(1);
+        list.append(2);
+        list.append(3);
+        list.append(4);
+        list.append(5);
 
         // For reversing the linked list (Working fine) 
 
@@ -47,7 +46,12 @@ public class Main {
 
         // For converting the binary number to decimal number 
 
-        BinaryToDecimal binaryToDecimal = new BinaryToDecimal();
-        System.out.println("the decimal number is..."+binaryToDecimal.convertBinaryToDecimal(list));
+        // BinaryToDecimal binaryToDecimal = new BinaryToDecimal();
+        // System.out.println("the decimal number is..."+binaryToDecimal.convertBinaryToDecimal(list));
+
+        // For reversing the linkedlist between a specific range.
+        
+        ReverseBetween reverseBetween_list = new ReverseBetween();
+        reverseBetween_list.reverseBetweenLinkedlist(list, 1, 2);
     }
 }
