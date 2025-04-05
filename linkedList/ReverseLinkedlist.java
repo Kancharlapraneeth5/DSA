@@ -19,8 +19,8 @@ public class ReverseLinkedlist extends Linkedlist{
         linkedlist.head = linkedlist.tail;
         linkedlist.tail = temp;
 
-        super.head = linkedlist.head;
-        print();
+        head = linkedlist.head;
+        linkedlist.print();
      }
    }
 }
