@@ -1,4 +1,5 @@
 package linkedList;
+
 public class Linkedlist {
     Node head;
     Node tail;
