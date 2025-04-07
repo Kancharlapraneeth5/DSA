@@ -26,10 +26,13 @@ public class Main {
         // System.out.println("Setting node at the specific index is ..." + list.setNode(20, 65));
         // list.printList();
 
-        list.insert(list.getLength(), 35);
-        list.printList();
+        // list.insert(list.getLength(), 35);
+        // list.printList();
 
-        list.remove(list.getLength() - 1);
-        list.printList();
+        // list.remove(list.getLength() - 1);
+        // list.printList();
+
+        SwapFirstAndLast swapFL_list = new SwapFirstAndLast();
+        swapFL_list.swapFirstAndLast(list);
     }
 }
