@@ -4,12 +4,17 @@ public class Main {
     public static void main(String[] args) {
         Linkedlist list = new Linkedlist();
 
-        // Test case - 1
+        Linkedlist list1 = new Linkedlist();
+
+        // list - 1
         list.append(1);
-        list.append(2);
         list.append(3);
-        list.append(4);
         list.append(5);
+
+        // list - 2
+        list1.append(2);
+        list1.append(3);
+        list1.append(4);
 
         // For reversing the linked list (Working fine) 
 
@@ -51,7 +56,11 @@ public class Main {
 
         // For reversing the linkedlist between a specific range.
         
-        ReverseBetween reverseBetween_list = new ReverseBetween();
-        reverseBetween_list.reverseBetweenLinkedlist(list, 1, 2);
+        // ReverseBetween reverseBetween_list = new ReverseBetween();
+        // reverseBetween_list.reverseBetweenLinkedlist(list, 1, 2);
+
+        // For merging two sorted linked lists 
+        MergeSortedLists merge_lists = new MergeSortedLists();
+        merge_lists.mergeSortedLists(list, list1);
     }
 }
