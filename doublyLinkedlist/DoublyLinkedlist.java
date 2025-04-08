@@ -203,4 +203,12 @@ public class DoublyLinkedlist {
             }
             System.out.println();
         }
+        // print the linked list from a specific node
+        public void printListFromSpecificNode(Node node){
+            Node temp = node;
+            while(temp != null){
+                System.out.println(temp.data);
+                temp = temp.next;
+            }
+      }
 }
