@@ -5,10 +5,10 @@ public class Main {
         DoublyLinkedlist list = new DoublyLinkedlist();
         
         list.append(1);
-        list.append(2);
-        list.append(3);
-        list.append(4);
-        list.append(5);
+        list.append(1);
+        list.append(1);
+        list.append(1);
+        list.append(1);
 
         // list.printList();
         // System.out.println("The length of the doubly linked list is: " + list.getLength());
@@ -40,9 +40,15 @@ public class Main {
         // swapFL_list.swapFirstAndLast(list);
 
 
-        // For reversing the doubly linked list.
+        // For reversing the doubly linked list. (Working fine)
 
-        ReverseDoublyLinkedlist rev_list = new ReverseDoublyLinkedlist();
-        rev_list.reverseList(list);
+        // ReverseDoublyLinkedlist rev_list = new ReverseDoublyLinkedlist();
+        // rev_list.reverseList(list);
+
+
+        // For checking if the doubly linked list is a palindrome or not. 
+
+        PalindromeChecker palin_list = new PalindromeChecker();
+        System.out.println("The list is a palindrome: " + palin_list.isPalindrome(list));
     }
 }
