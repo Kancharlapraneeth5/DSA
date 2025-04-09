@@ -5,10 +5,11 @@ public class Main {
         DoublyLinkedlist list = new DoublyLinkedlist();
         
         list.append(1);
-        list.append(1);
-        list.append(1);
-        list.append(1);
-        list.append(1);
+        list.append(2);
+        list.append(3);
+        list.append(4);
+        list.append(5);
+        list.append(6);
 
         // list.printList();
         // System.out.println("The length of the doubly linked list is: " + list.getLength());
@@ -46,9 +47,15 @@ public class Main {
         // rev_list.reverseList(list);
 
 
-        // For checking if the doubly linked list is a palindrome or not. 
+        // For checking if the doubly linked list is a palindrome or not. (working fine)
 
-        PalindromeChecker palin_list = new PalindromeChecker();
-        System.out.println("The list is a palindrome: " + palin_list.isPalindrome(list));
+        // PalindromeChecker palin_list = new PalindromeChecker();
+        // System.out.println("The list is a palindrome: " + palin_list.isPalindrome(list));
+    
+        // For swapping adjacent node pairs in the doubly linked list. 
+
+        SwapAdjacentNodePairs swap_list = new SwapAdjacentNodePairs();
+        swap_list.swapAdjacentNodePairs(list);
+    
     }
 }
