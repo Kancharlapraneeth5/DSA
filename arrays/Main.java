@@ -1,5 +1,8 @@
 package arrays;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -22,6 +25,7 @@ public class Main {
         // }
 
         // Reverse an array test
+
         // ReverseArray reverseArray = new ReverseArray();
         // int [] arr_3 = {1,2,3,4,5,6,7,8,9};
         // int [] result_3 = reverseArray.reverseArray(arr_3);
@@ -31,11 +35,34 @@ public class Main {
         //     System.out.println(result_3[i] + " ");
         // }
 
-        MaximumSubArray maximumSubArray = new MaximumSubArray();
-        int [] arr_4 = {-3, -4, 2, 3, 5};
-        Integer result_4 = maximumSubArray.maxiSubArraySum(arr_4);
-        System.out.print("The maximum subarray sum is: ");
-        System.out.println(result_4);
+
+        // MaximumSubArray test 
+        // the below is the kadane's algorithm to find the maximum subarray sum.
+
+        // MaximumSubArray maximumSubArray = new MaximumSubArray();
+        // int [] arr_4 = {-3, -4, 2, 3, 5};
+        // Integer result_4 = maximumSubArray.maxiSubArraySum(arr_4);
+        // System.out.print("The maximum subarray sum is: ");
+        // System.out.println(result_4);
+
+
+        // MergeIntervals test
+        MergeIntervals mergeIntervals = new MergeIntervals();
+        //int[][] intervals = {{1,3}, {8,10}, {2,6}};
+        //int[][] intervals = {{1,10}, {2,6}, {3,9}};
+        //int[][] intervals = {{1, 2}, {3, 4}, {5, 6}};
+        // int[][] intervals = {{1, 5}, {2, 6}, {3, 7}};
+        // int[][] intervals = {{1, 3}, {5, 8}, {2, 6}};
+        // int[][] intervals = {{1, 2}, {2, 3}, {3, 4}};
+        // int[][] intervals = {{5, 10}};
+        int [][] intervals = {{}};
+        ArrayList<int[]> mergedIntervals = mergeIntervals.mergeIntervals(intervals);
+
+        // print the merged intervals
+        System.out.println("The merged intervals array is: ");
+        for (int i = 0; i < mergedIntervals.size(); i++) {
+            System.out.println(Arrays.toString(mergedIntervals.get(i)));
+        }
     }
 }
 
