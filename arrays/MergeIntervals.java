@@ -35,7 +35,6 @@ public class MergeIntervals {
             }
             // no possiblitity of merging the two intervals.
             else{
-                // merged_index++;
                 mergedList.add(intervals[mainArray_index]);
                 mainArray_index++;
             }

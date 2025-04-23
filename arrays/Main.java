@@ -1,7 +1,7 @@
 package arrays;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+// import java.util.ArrayList;
+// import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
@@ -47,7 +47,7 @@ public class Main {
 
 
         // MergeIntervals test
-        MergeIntervals mergeIntervals = new MergeIntervals();
+        // MergeIntervals mergeIntervals = new MergeIntervals();
         //int[][] intervals = {{1,3}, {8,10}, {2,6}};
         //int[][] intervals = {{1,10}, {2,6}, {3,9}};
         //int[][] intervals = {{1, 2}, {3, 4}, {5, 6}};
@@ -55,14 +55,41 @@ public class Main {
         // int[][] intervals = {{1, 3}, {5, 8}, {2, 6}};
         // int[][] intervals = {{1, 2}, {2, 3}, {3, 4}};
         // int[][] intervals = {{5, 10}};
-        int [][] intervals = {{}};
-        ArrayList<int[]> mergedIntervals = mergeIntervals.mergeIntervals(intervals);
+        // int [][] intervals = {{}};
+        // ArrayList<int[]> mergedIntervals = mergeIntervals.mergeIntervals(intervals);
 
-        // print the merged intervals
-        System.out.println("The merged intervals array is: ");
-        for (int i = 0; i < mergedIntervals.size(); i++) {
-            System.out.println(Arrays.toString(mergedIntervals.get(i)));
-        }
+        // // print the merged intervals
+        // System.out.println("The merged intervals array is: ");
+        // for (int i = 0; i < mergedIntervals.size(); i++) {
+        //     System.out.println(Arrays.toString(mergedIntervals.get(i)));
+        // }
+
+        // Product of array elements except itself test.
+
+        // ProductOfArrayExceptSelf prod_array = new ProductOfArrayExceptSelf();
+        // int [] arr = {1,2,3,4};
+        // //int [] arr = {2, 3, 0, 4};
+        // //int [] arr = {-1, 1, 0, -3, 3};
+        // //int [] arr = {5, 5};
+        // int [] result = prod_array.productOfArrayExceptSelf(arr);
+        // System.out.println("Printing array elements: ");
+        // for(int i = 0; i < result.length; i++){
+        //     System.out.println(result[i]);
+        // }
+
+        // Trapping rain water test.
+
+        TrappingRainWater trappingRainWater_test = new TrappingRainWater();
+        //int [] arr = {0,3,0,2,0,4};
+        //int [] arr = {1, 1, 1, 1};
+        //nt [] arr = {2, 0, 2};
+        int [] arr = {5, 4, 3, 2, 1}; // check the code for this test case. (failing case).
+        //int [] arr = {0, 2, 4, 2, 0};
+        //int [] arr = {0, 1, 0, 2, 1, 0, 1, 3}; // check the code for this test case. (failing case).
+        //int [] arr = {3};
+        //int [] arr = {};
+        System.out.println();
+        System.out.println("The total water trapped is: "+ trappingRainWater_test.trappingRainWater(arr));
     }
 }
 
