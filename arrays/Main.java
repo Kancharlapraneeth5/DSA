@@ -82,9 +82,9 @@ public class Main {
         TrappingRainWater trappingRainWater_test = new TrappingRainWater();
         //int [] arr = {0,3,0,2,0,4};
         //int [] arr = {1, 1, 1, 1};
-        //nt [] arr = {2, 0, 2};
-        int [] arr = {5, 4, 3, 2, 1}; // check the code for this test case. (failing case).
-        //int [] arr = {0, 2, 4, 2, 0};
+        //int [] arr = {2, 0, 2};
+        //int [] arr = {5, 4, 3, 2, 1}; // check the code for this test case. (failing case).
+        int [] arr = {0, 2, 4, 2, 0};
         //int [] arr = {0, 1, 0, 2, 1, 0, 1, 3}; // check the code for this test case. (failing case).
         //int [] arr = {3};
         //int [] arr = {};
