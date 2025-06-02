@@ -1,38 +1,27 @@
 package stacks;
 
-import java.util.Stack;
-
 public class Main {
     public static void main(String[] args) {
-        // Declare a stack of Integers
-        // Stacks<Integer> stack = new Stacks<>(5);
-
-        // stack.push(10);
-        // stack.push(15);
-        // stack.push(20);
-        // stack.push(25);
-
-        // stack.print();
-
-        // System.out.println("\nPopped value: " + stack.pop());
-        // stack.print();
-
-        // // Declare a stack of strings
-        // Stacks<String> stringStack = new Stacks<>("Hello");
-        // stringStack.push("World");
-        // stringStack.push("Java");
-        // stringStack.push("Stacks");
-
-        // stringStack.print();
-
-        // System.out.println("\nPopped value: " + stringStack.pop());
-
-        // stringStack.print();
-
-        Stack<Character> charStack = new Stack<>();
+        // Balancing Parentheses 
+        Stacks<Character> charStack = new Stacks<>();
         BalanceParanthesis balanceParanthesis = new BalanceParanthesis();
-        String str = "(())()()";
+        String str = "(())()())";
         boolean isBalanced = balanceParanthesis.isBalanced(str, charStack);
         System.out.println("Is the string \"" + str + "\" balanced? " + isBalanced);
+
+
+        // Sorting a stack of integers
+        Stacks<Integer> intStack = new Stacks<>();
+        SortStack sortStack_obj = new SortStack();
+        intStack.push(4);
+        intStack.push(2);
+        intStack.push(5);
+        intStack.push(1);
+        intStack.push(3);
+        System.out.println("Original Stack:");
+        intStack.print();
+        sortStack_obj.sortStack(intStack);
+        System.out.println("Sorted Stack:");
+        intStack.print();
     }
 }

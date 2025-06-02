@@ -1,9 +1,7 @@
 package stacks;
 
-import java.util.Stack;
-
 public class BalanceParanthesis extends Stacks<Character> {
-    public boolean isBalanced(String str, Stack<Character> charStack) {
+    public boolean isBalanced(String str, Stacks<Character> charStack) {
         // An empty string is considered balanced
         if (str.length() == 0) {
             return true;

@@ -12,6 +12,11 @@ public class Stacks<T> {
         length = 0;
     }
 
+    // Check if the stack is empty
+    public boolean isEmpty() {
+        return stackList.size() == 0;
+    }
+
     // Constructor with an initial value
     public Stacks(T value) {
         stackList = new ArrayList<>();
@@ -34,6 +39,16 @@ public class Stacks<T> {
             T poppedValue = stackList.remove(stackList.size() - 1); // Remove last element
             length--;
             return poppedValue;
+        }
+    }
+
+    // Peek at the top value of the stack without removing it
+    public T peek() {
+        if (stackList.isEmpty()) {
+            System.out.println("The stack is empty; can't peek element.");
+            throw new RuntimeException("Stack is empty");
+        } else {
+            return stackList.get(stackList.size() - 1); // Return last element without removing it
         }
     }
 
