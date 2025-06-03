@@ -23,5 +23,17 @@ public class Main {
         sortStack_obj.sortStack(intStack);
         System.out.println("Sorted Stack:");
         intStack.print();
+
+        // Queue implementation using two stacks
+        QueueWithStacks queueWithStacks = new QueueWithStacks();
+        queueWithStacks.enqueue(10);
+        queueWithStacks.enqueue(20);
+        queueWithStacks.enqueue(30);
+        System.out.println("Queue after enqueuing 10, 20, 30:");
+        queueWithStacks.print();
+        System.out.println("Dequeued value: " + queueWithStacks.dequeue());
+        System.out.println("Queue after dequeue:");
+        queueWithStacks.print();
+
     }
 }
