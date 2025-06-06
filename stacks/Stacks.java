@@ -52,6 +52,25 @@ public class Stacks<T> {
         }
     }
 
+    // Get index of a specific value (first occurrence from bottom to top)
+    public int indexOf(T value) {
+        return stackList.indexOf(value);
+    }
+
+    // Get the size of the stack
+    public int size() {
+        return stackList.size();
+    }
+
+    // Get the value at a specific index (0 is bottom, size-1 is top)
+    public T get(int index){
+        if (index < 0 || index >= stackList.size()) {
+            System.out.println("Index out of bounds");
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + stackList.size());
+        }
+        return stackList.get(index);
+    }
+
     // Print the values in the stack
     public void print() {
         if (stackList.isEmpty()) {
@@ -63,6 +82,4 @@ public class Stacks<T> {
             System.out.println();
         }
     }
-
-    // Optional: Get the size of th
 }
