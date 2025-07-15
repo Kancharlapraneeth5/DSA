@@ -18,7 +18,7 @@ public class BalanceParanthesisDiffParanthesis extends Stacks<Character> {
         for(int i = 0; i < str.length(); i++){
             char currentChar = str.charAt(i);
             if(currentChar == '{' || currentChar == '(' || currentChar == '['){
-                CharStack.push(currentChar);
+                CharStack.push(currentChar); 
             }
             if(currentChar == '}' || currentChar == ')' || currentChar == ']'){
                 if(CharStack.isEmpty()){
